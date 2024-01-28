@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#left-container {
+  background: url(./img/bg.png) no-repeat center/cover;
+  padding-top: 5%;
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+}
+
+#left-container img {
+  width: 150px;
+}
+
+#left-container h1, h3, img{
+  color: aliceblue;
+  margin-bottom: 5%;
+}
+
+#left-container h1{
+  color: black;
+  background-color: orange;
+}
+#left-container h3{
+  width: 50%;
+  line-height: 1.5;
+  margin-left: 25%;
+  
+}
+
+#right-container {
+  padding-top: 5%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+#right-container h1{
+  text-align: center;
+}
+
+
