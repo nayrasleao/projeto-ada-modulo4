@@ -1,6 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
   <head>
+    <meta name="keywords" content="churrascometro" />
+    <meta name="author" content="Nayra Leão" />
+    <meta http-equiv="Content-Language" content="pt-BR" />
+    <meta property="og:title" content="Churrascometro" />
+    <meta
+      property="og:description"
+      content="Calculadora de itens para Churrasco, Churrascometro"
+    />
+    <meta property="og:email" content="nayraleao.souza@gmail.com" />
+    <meta property="og:type" content="website" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,66 +36,79 @@
     <div id="right-container">
       <h1>Churrascômetro</h1>
 
-      <div id="calc-container">
+        <div id="calc-container">
+          <!-- Passo 1 -->
+          <div id="userId">
+            <div class="input-container">
+              <input type="text" id="name" placeholder="Steve Jobs" required />
+              <input
+                type="email"
+                id="email"
+                placeholder="nome@email.com"
+                required
+              />
+              <input type="text" id="cep" placeholder="69000-000" required />
+            </div>
 
-                <!-- inicio do html dinamico -->
-        <!-- Passo 1 -->
-        <div id="userId">
-          <div class="input-container">
-            <input type="text" id="name" placeholder="Steve Jobs" required />
-            <input
-              type="email"
-              id="email"
-              placeholder="nome@email.com"
-              required
-            />
-            <input type="text" id="cep" placeholder="69000-000" required />
+            <div class="input-container">
+              <label>
+                <input type="checkbox" id="checkedPromo" checked /> Aceito receber
+                e-mails com promoções
+              </label>
+              <button id="next">Cadastrar</button>
+            </div>
           </div>
-  
-          <div class="input-container">
-            <label>
-              <input type="checkbox" id="checkedPromo" checked /> Aceito receber
-              e-mails com promoções
-            </label></br>
-            <button id="next">Iniciar</button>
+          <!-- passo 2 -->
+          <div id="dados">
+            <h2 id="title">Informe quantos adultos e crianças participarão</h2>
+            <div id="adulto" class="quadrado">
+              <h2>Adultos</h2>
+              <input
+                type="number"
+                id="adultos"
+                name="adultos"
+                min="0"
+                max="100"
+                step="1"
+                value="0"
+              />
+              <h2 id="pessoas-bebidas">Quantos bebem Cerveja?</h2>
+              <input
+                type="number"
+                id="pessoasBebem"
+                name="pessoasBebem"
+                min="0"
+                max="100"
+                step="1"
+                value="0"
+              />
+            </div>
+
+            <div id="crianca" class="quadrado">
+              <h2>Crianças</h2>
+              <input
+                type="number"
+                id="criancas"
+                name="criancas"
+                min="0"
+                max="100"
+                step="1"
+                value="0"
+              />
+            </div>
+
+            <div class="container">
+              <button id="calc">Calcular</button>
+            </div>
+          </div>
+
+
+          <!-- Exibir Resultado -->
+          <div class="container" id="result">
           </div>
         </div>
-
-
-<!-- passo 2 -->
-<h2 id="title">Informe quantos adultos e crianças participarão</h2>
-
-<div id= "dados">
-
-  <div id="adulto" class = "quadrado">
-      <h2>Adultos</h2>
-      <input type="number" id="adultos" name="adultos" min="0" max="100" step="1" value="0">
-      <h2 id="pessoas-bebidas">Quantos bebem Cerveja?</h2>
-      <input type="number" id="pessoasBebem" name="pessoasBebem" min="0" max="100" step="1" value="0">
-
-  </div>
-
-  <div id="crianca" class = "quadrado">
-      <h2>Crianças</h2>
-      <input type="number" id="criancas" name="criancas" min="0" max="100" step="1" value="0">
-
-  </div>
-
- 
-</div>
-<div class="container">
-  <button id="calc">Calcular</button>
-</div>
-
-<!-- fim do html dinamico -->
-
-      <!-- Exibir Resultado -->
-      <div class="container" id="result"></div>
-
-
       </div>
-      
-      
+
     <script src="script.js"></script>
   </body>
 </html>
